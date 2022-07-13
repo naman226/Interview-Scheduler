@@ -1,0 +1,67 @@
+Components
+Button
+DayList
+DayListItem
+InterviewerList
+InterviewerListItem
+Appointment
+Appointment/Header
+Appointment/Empty
+Appointment/Show
+Appointment/Form
+Appointment/Status
+Appointment/Error
+Appointment/Confirm
+
+Button
+State: NO STATE
+Props: confirm (boolean), disabled (boolean), danger, boolean, onClick (function), clickable
+Used by: EVERYONE
+DayList
+State: 
+Props:
+Used by: App
+DayListItem
+State: Yes
+Props:
+Used by: DaylistItem
+InterviewerList
+State: yes
+Props:
+Used by: appoint and form
+InterviewerListItem
+State:
+Props:
+Used by: interviewerList
+Appointment
+State: Yes
+Props:
+Used by:
+Appointment/Header
+State:
+Props:
+Used by: app
+Appointment/Empty
+State:
+Props:
+Used by: app
+Appointment/Show
+State:
+Props:
+Used by: app
+Appointment/Form
+State:
+Props:
+Used by: app
+Appointment/Status
+State:
+Props:
+Used by: app
+Appointment/Error
+State:
+Props:
+Used by: app
+Appointment/Confirm
+State:
+Props:
+Used by: app
