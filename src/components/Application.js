@@ -66,6 +66,7 @@ export default function Application() {
 
   const appointmentsData = dailyAppointments.map(appointment => {
     const interview = getInterview(state, appointment.interview)
+    console.log(interview);
     
 
     return (<Appointment
