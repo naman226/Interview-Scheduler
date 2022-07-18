@@ -6,11 +6,10 @@ import Appointment from "./Appointment";
 import axios from "axios";
 import { getAppointmentsForDay } from "helpers/selectors";
 import { getInterview } from "helpers/selectors";
-import useVisualMode from "hooks/useVisualMode";
+
 import { getInterviewersForDay } from "helpers/selectors";
 
 export default function Application() {
-
 
   const [state, setState] = useState({
     day: "Monday",
@@ -19,6 +18,22 @@ export default function Application() {
     interviewers: {}
   })
 
+  function bookInterview(id, interview) {
+    console.log(id, interview, "This");
+    const appointment = {
+      ...state.appointments[id],
+      interview: { ...interview }
+    };
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+    return axios.put(`http://localhost:8001/api/appointments/${id}`, {interview})
+    .then(() => setState({
+      ...state,
+      appointments
+    }));
+  };
 
   const dailyAppointments = getAppointmentsForDay(state, state.day);
   const dailyInterviewers = getInterviewersForDay(state, state.day);
@@ -44,6 +59,7 @@ export default function Application() {
       time={appointment.time}
       interview={interview}
       interviewers={dailyInterviewers}
+      bookInterview={bookInterview}
     />)
   });
 
@@ -71,7 +87,10 @@ export default function Application() {
       </section>
       <section className="schedule">
         {appointmentsData}
-        <Appointment key="last" time="5pm" />
+        <Appointment
+        key="last" 
+        time="5pm"
+        bookInterview={bookInterview} />
       </section>
     </main>
   );
