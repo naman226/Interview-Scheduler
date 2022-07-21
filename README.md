@@ -21,9 +21,10 @@ Install dependencies with `npm install`.
 
 Run the web server with `npm start` command.
 
-## Running Jest Test Framework
+## Running Test Framework
 
 Run the integrated tested based on Jest with `npm test`.
+Run the "End to End" test based on cypress with `npm run cypress`.
 
 ## License
 
