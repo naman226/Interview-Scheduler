@@ -26,3 +26,5 @@ Run the web server with `npm start` command.
 Run the integrated tested based on Jest with `npm test`.
 
 ## License
+
+"ISC"
