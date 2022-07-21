@@ -1,6 +1,6 @@
 # Interview Scheduler
 
-Interview Scheduler is an appointment management app used to book, edit and cancel appointments with Lighthouse Labs Instructors. Developed on modern web tools of React framework, HTML 5, CSS3 and storybook to build components in isolation. The project has been well tested with integration testing and cypress "End to End" testing for core functional features.
+Interview Scheduler is an appointment management app used to book, edit and cancel appointments with Lighthouse Labs Instructors. Developed on modern web tools of React framework, JSX, CSS3 and storybook to build components in isolation. The project has been well tested with integration testing and cypress "End to End" testing for core functional features.
 
 ## Project Snap Shots
 
